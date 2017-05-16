@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  proxy:
+    build: ./
+    networks:
+      - site1
+      - site2
+    ports:
+      - 9001:80
+      - 443:443
+
+networks:
+  site1:
+    external:
+      name: site1_default
+  site2:
+    external:
+      name: site2_default
+
