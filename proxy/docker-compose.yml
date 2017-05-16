@@ -7,7 +7,7 @@ services:
       - site1
       - site2
     ports:
-      - 9001:80
+      - 80:80
       - 443:443
 
 networks:
